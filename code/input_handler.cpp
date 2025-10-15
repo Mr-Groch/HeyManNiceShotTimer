@@ -529,7 +529,7 @@ void handleCalibrationInput(TimerState calibrationType) {
         title = "Calibrate Recoil";
         unit = "G";
         StickCP2.Imu.getAccelData(&accX, &accY, &accZ);
-        currentValue = abs(accZ);
+        currentValue = max(abs(accX), max(abs(accY), abs(accZ)));
         if (currentValue > peakRecoilValue) {
             peakRecoilValue = currentValue;
             valueChanged = true;
