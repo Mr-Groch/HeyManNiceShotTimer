@@ -151,7 +151,15 @@ void setup() {
     pinMode(BUZZER_PIN_2, OUTPUT);
     digitalWrite(BUZZER_PIN_2, LOW);
 
-    StickCP2.Speaker.end(); 
+    //StickCP2.Speaker.end(); 
+    auto spkCfg = StickCP2.Speaker.config();
+    spkCfg.buzzer = false;
+    spkCfg.pin_data_out = BUZZER_PIN_2;
+    spkCfg.sample_rate = 192000;
+    spkCfg.magnification = 128;
+    StickCP2.Speaker.config(spkCfg);
+    StickCP2.Speaker.begin();
+    StickCP2.Speaker.setVolume(255);
 
     if (!micPeakRMS.begin(StickCP2)) {
         displayBootScreen("ERROR", "", "Mic Init Failed!");

@@ -14,10 +14,12 @@ void buzzerTask(void *pvParameters) {
         if (xQueueReceive(buzzerQueue, &receivedRequest, portMAX_DELAY) == pdPASS) {
             if (receivedRequest.frequency > 0 && receivedRequest.duration > 0) {
                 tone(BUZZER_PIN, receivedRequest.frequency, receivedRequest.duration);
-                tone(BUZZER_PIN_2, receivedRequest.frequency, receivedRequest.duration);
+                //tone(BUZZER_PIN_2, receivedRequest.frequency, receivedRequest.duration);
+                StickCP2.Speaker.tone(receivedRequest.frequency, receivedRequest.duration);
                 vTaskDelay(pdMS_TO_TICKS(receivedRequest.duration + 5)); 
                 noTone(BUZZER_PIN);
-                noTone(BUZZER_PIN_2);
+                //noTone(BUZZER_PIN_2);
+                //StickCP2.Speaker.stop();
             } else if (receivedRequest.duration > 0) {
                  vTaskDelay(pdMS_TO_TICKS(receivedRequest.duration));
             }

@@ -6,12 +6,12 @@
 // --- Configuration Constants (These are generally safe in headers as const) ---
 const unsigned long LONG_PRESS_DURATION_MS = 750;
 const unsigned long SHOT_REFRACTORY_MS = 150;
-const unsigned long TIMEOUT_DURATION_MS = 15000;
+const unsigned long TIMEOUT_DURATION_MS = 30000;
 const unsigned long BEEP_NOTE_DURATION_MS = 150;
 const unsigned long BEEP_NOTE_DELAY_MS = 50;
 const unsigned long BATTERY_CHECK_INTERVAL_MS = 60000;
 const float BATTERY_LOW_PERCENTAGE = 0.78f;
-const int MAX_SHOTS_LIMIT = 20;
+const int MAX_SHOTS_LIMIT = 30;
 const int MENU_ITEM_HEIGHT_LANDSCAPE = 25;
 const int MENU_ITEM_HEIGHT_PORTRAIT = 18;
 const int MENU_ITEMS_PER_SCREEN_LANDSCAPE = 3;
@@ -25,7 +25,7 @@ const unsigned long DRY_FIRE_RANDOM_DELAY_MIN_MS = 2000;
 const unsigned long DRY_FIRE_RANDOM_DELAY_MAX_MS = 5000;
 const int MAX_PAR_BEEPS = 10;
 const unsigned long RECOIL_DETECTION_WINDOW_MS = 100;
-const unsigned long MIN_FIRST_SHOT_TIME_MS = 100; // Min time after start for first shot
+const unsigned long MIN_FIRST_SHOT_TIME_MS = 200; // Min time after start for first shot
 const unsigned long AUTO_SLEEP_TIMEOUT_MS = 1 * 60 * 1000;
 const unsigned long SLEEP_MESSAGE_DELAY_MS = 1500;
 // #define C3_FREQUENCY 130.81f // No longer used for keep-alive
