@@ -379,7 +379,7 @@ void handleNoisyRangeTiming() {
 
     if (checkingForRecoil) {
         StickCP2.Imu.getAccelData(&accX, &accY, &accZ);
-        float currentRecoil = abs(accZ);
+        float currentRecoil = max(abs(accX), max(abs(accY), abs(accZ)));
 
         if (currentRecoil > recoilThreshold) {
             unsigned long shotTimeMillis = lastSoundPeakTime; 
