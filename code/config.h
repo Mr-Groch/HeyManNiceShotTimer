@@ -27,7 +27,7 @@ const unsigned long DRY_FIRE_RANDOM_DELAY_MAX_MS = 5000;
 const int MAX_PAR_BEEPS = 10;
 const unsigned long RECOIL_DETECTION_WINDOW_MS = 100;
 const unsigned long MIN_FIRST_SHOT_TIME_MS = 200; // Min time after start for first shot
-const unsigned long AUTO_SLEEP_TIMEOUT_MS = 1 * 60 * 1000;
+const unsigned long AUTO_SLEEP_TIMEOUT_MS = 3 * 60 * 1000;
 const unsigned long SLEEP_MESSAGE_DELAY_MS = 1500;
 // #define C3_FREQUENCY 130.81f // No longer used for keep-alive
 const unsigned long BT_SCAN_DURATION_S = 10;
